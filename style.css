@@ -1071,19 +1071,36 @@ header.sticky {
         font-size: 14px;
     }
 
-    /* Categories Section */
+   /* Updated Categories Section for Mobile */
+@media (max-width: 768px) {
     .categories-content {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: 1fr; /* Single column by default */
         gap: 1.5rem;
     }
 
-    .row-img {
-        width: 120px;
-        height: 160px;
-        border-radius: 50px;
+    /* First two items in full width */
+    .categories-content > :nth-child(1),
+    .categories-content > :nth-child(2) {
+        grid-column: 1 / -1; /* Span full width */
     }
 
-    /* About Section */
+    /* Remaining items in 2-column grid */
+    .categories-content > :nth-child(n+3) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        grid-column: 1 / -1; /* Span full width */
+    }
+
+    .row-img {
+        width: 100%; /* Full width of container */
+        height: 140px;
+        border-radius: 30px;
+        margin: 0 auto;
+    }
+
+    /* About Section adjustments */
     .about {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1091,17 +1108,38 @@ header.sticky {
 
     .about-img img {
         width: 100%;
+        max-height: 300px;
+        object-fit: cover;
     }
 
     .about-text .rating {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+        margin-top: 1.5rem;
     }
 
     .col {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
+        margin-bottom: 0.5rem;
     }
+}
+
+/* Further optimization for small screens */
+@media (max-width: 480px) {
+    .categories-content > :nth-child(n+3) {
+        gap: 0.8rem;
+    }
+
+    .row-img {
+        height: 120px;
+        border-radius: 20px;
+    }
+
+    .col {
+        padding: 8px;
+    }
+}
 
     /* Destination Section */
     .destination-content {
