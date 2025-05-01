@@ -1235,6 +1235,69 @@ header.sticky {
     }
 }
 
+/* Mobile Full Screen Stats Section */
+@media (max-width: 768px) {
+    .rating {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .rating.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .col {
+        width: 80%;
+        max-width: 300px;
+        padding: 30px 20px;
+        margin: 15px 0;
+        background: rgba(255, 145, 77, 0.2);
+        border: 2px solid var(--main-color);
+        border-radius: 20px;
+        text-align: center;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+
+    .rating.active .col {
+        transform: scale(1);
+    }
+
+    .col h4 {
+        font-size: 3rem;
+        color: var(--main-color);
+        margin-bottom: 10px;
+    }
+
+    .col p {
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    /* Close button */
+    .close-stats {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+
 
 
 

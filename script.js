@@ -34,5 +34,33 @@ window.addEventListener('load', animateOnScroll);
 
 
 
+/* Add this JavaScript to your file  home*/
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all stat columns
+    const statCols = document.querySelectorAll('.col');
+    const ratingSection = document.querySelector('.rating');
+    const closeBtn = document.createElement('div');
+    closeBtn.className = 'close-stats';
+    closeBtn.innerHTML = '×';
+    ratingSection.appendChild(closeBtn);
 
+    // Click handler for stats
+    statCols.forEach(col => {
+        col.addEventListener('click', function() {
+            ratingSection.classList.add('active');
+        });
+    });
 
+    // Close handler
+    closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        ratingSection.classList.remove('active');
+    });
+
+    // Close when clicking outside stats
+    ratingSection.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.classList.remove('active');
+        }
+    });
+});
