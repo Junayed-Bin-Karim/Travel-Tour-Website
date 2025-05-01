@@ -1264,3 +1264,36 @@ header.sticky {
     }
 }
 
+
+.home {
+    position: relative;
+    height: 100vh;
+    min-height: 600px; /* Add minimum height */
+    width: 100%;
+    background: 
+        linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+        url('images/main.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+    .home {
+        background: 
+            linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+            url('images/main-mobile.jpg') no-repeat center center/cover;
+        background-attachment: scroll;
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    /* Fallback for ultra-mobile */
+    @media (max-height: 500px) {
+        .home {
+            min-height: 500px;
+        }
+    }
+}
+
