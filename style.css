@@ -1071,6 +1071,11 @@ header.sticky {
         font-size: 14px;
     }
 
+
+
+
+    
+
    /* Updated Categories Section - All 2-column but first row emphasized */
 @media (max-width: 768px) {
     .categories-content {
@@ -1109,10 +1114,7 @@ header.sticky {
     }
 
     /* About section adjustments remain the same */
-    .about {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+    
 }
 
 /* Small screen adjustments */
@@ -1132,6 +1134,17 @@ header.sticky {
         border-radius: 25px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
      /* Destination Section */
     .destination-content {
