@@ -1381,32 +1381,3 @@ header.sticky {
 
 
 
-/* Add to your mobile CSS section */
-@media (max-width: 768px) {
-    /* Disable animations for low-powered devices */
-    @media (prefers-reduced-data: reduce), (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-      }
-    }
-    
-    /* Optimize image rendering */
-    img {
-      max-width: 100%;
-      height: auto;
-      image-rendering: -webkit-optimize-contrast;
-    }
-    
-    /* Simplify layouts for mobile */
-    .destination-content {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    
-    /* Reduce font sizes */
-    :root {
-      --h1-font: 2.2rem;
-      --h2-font: 1.8rem;
-    }
-  }
