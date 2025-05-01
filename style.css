@@ -1115,18 +1115,7 @@ header.sticky {
 
 
 
-/* Base styling */
-.about {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 40px 20px;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  /* Mobile layout */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .about {
       flex-direction: column;
       text-align: center;
@@ -1154,18 +1143,17 @@ header.sticky {
     .rating {
       display: flex;
       justify-content: space-between;
+      flex-wrap: nowrap; /* Prevent wrap */
       gap: 10px;
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
+     }
   
     .rating .col {
+      width: 100px; /* Fixed width to ensure fit on small screen */
+      flex-shrink: 0;
       background: #f9f9f9;
-      padding: 15px;
+      padding: 10px;
       border-radius: 10px;
-      width: 30%; /* Adjusted to fit 3 columns in 1 row */
-      box-sizing: border-box;
-    }
+     }
   
     .rating .col h4 {
       font-size: 18px;
