@@ -302,17 +302,19 @@
     </section>
 
 
+    <picture>
+        <!-- WebP for modern browsers (50% smaller) -->
+        <source srcset="images/img1-small.webp 480w, images/img1-medium.webp 800w" 
+                type="image/webp" 
+                sizes="(max-width: 600px) 100vw, 50vw">
+        <!-- Fallback JPEG with responsive sources -->
+        <source srcset="images/img1-small.jpg 480w, images/img1-medium.jpg 800w" 
+                type="image/jpeg"
+                sizes="(max-width: 600px) 100vw, 50vw">
+        
+      </picture>
 
-
-    <!-- Replace all image tags with optimized versions -->
-<picture>
-    <source srcset="images/img1.webp" type="image/webp">
-    <source srcset="images/img1.jpg" type="image/jpeg"> 
-    <img src="images/img1.jpg" alt="Mountain Hiking Tour" loading="lazy">
-  </picture>
-
-
-  
+    
     <!-- footer section end -->
 
 
