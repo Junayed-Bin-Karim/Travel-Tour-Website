@@ -1161,10 +1161,10 @@ header.sticky {
     }
   
     .rating .col {
-       background: #f9f9f9;
+       background: #FF914D;
       padding: 15px;
       border-radius: 10px;
-      width: 80%;
+      width: 100%;
     }
   
     .rating .col h4 {
