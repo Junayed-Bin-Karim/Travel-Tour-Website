@@ -1115,9 +1115,7 @@ header.sticky {
 
 
 
-
-
-  /* Base styling */
+/* Base styling */
 .about {
     display: flex;
     flex-direction: row;
@@ -1155,31 +1153,33 @@ header.sticky {
   
     .rating {
       display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: nowrap;
+      justify-content: space-between;
+      gap: 10px;
       flex-direction: row;
+      flex-wrap: nowrap;
     }
   
     .rating .col {
       background: #f9f9f9;
       padding: 15px;
       border-radius: 10px;
-      width: 100px;
-      flex-shrink: 0;
+      width: 30%; /* Adjusted to fit 3 columns in 1 row */
+      box-sizing: border-box;
     }
   
     .rating .col h4 {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 5px;
     }
   
     .rating .col p {
-      font-size: 14px;
+      font-size: 13px;
       color: #666;
     }
   }
   
+
+
 
 
 
