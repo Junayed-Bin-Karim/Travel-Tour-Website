@@ -1023,6 +1023,13 @@ header.sticky {
 
 
 /* Mobile-First CSS Updates */
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     :root {
         --h1-font: 2.8rem;
@@ -1071,114 +1078,82 @@ header.sticky {
         font-size: 14px;
     }
 
-   /* Updated Categories Section for Mobile */
+
+
+
+
+
+
+
+
+   /* Updated Categories Section - All 2-column but first row emphasized */
 @media (max-width: 768px) {
     .categories-content {
         display: grid;
-        grid-template-columns: 1fr; /* Single column by default */
+        grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
         gap: 1.5rem;
     }
 
-    /* First two items in full width */
+    /* First row items (Beach & Desert) - larger */
     .categories-content > :nth-child(1),
     .categories-content > :nth-child(2) {
-        grid-column: 1 / -1; /* Span full width */
+        /* Keep in 2-col grid but make contents larger */
     }
 
-    /* Remaining items in 2-column grid */
-    .categories-content > :nth-child(n+3) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        grid-column: 1 / -1; /* Span full width */
+    /* First row images larger */
+    .categories-content > :nth-child(1) .row-img,
+    .categories-content > :nth-child(2) .row-img {
+        width: 100%;
+        height: 180px; /* Larger than others */
+        border-radius: 40px;
+        margin-bottom: 12px;
     }
 
-    .row-img {
-        width: 100%; /* Full width of container */
-        height: 140px;
+    /* Subsequent items - normal size */
+    .categories-content > :nth-child(n+3) .row-img {
+        width: 100%;
+        height: 140px; /* Slightly smaller */
         border-radius: 30px;
-        margin: 0 auto;
+        margin-bottom: 8px;
     }
 
-    /* About Section adjustments */
+    /* Text styling for first row */
+    .categories-content > :nth-child(1) h4,
+    .categories-content > :nth-child(2) h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    /* About section adjustments remain the same */
     .about {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-
-    .about-img img {
-        width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-    }
-
-    .about-text .rating {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-
-    .col {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 0.5rem;
-    }
 }
 
-/* Further optimization for small screens */
+/* Small screen adjustments */
 @media (max-width: 480px) {
-    .categories-content > :nth-child(n+3) {
-        gap: 0.8rem;
-    }
-
-    .row-img {
-        height: 120px;
-        border-radius: 20px;
-    }
-
-    .col {
-        padding: 8px;
-    }
-}
-
-/* Updated Categories Section with Beach & Desert First */
-@media (max-width: 768px) {
     .categories-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+         gap: 1rem;
     }
 
-    /* Make Beach and Desert full width (assuming they're first two items) */
-    .categories-content > :nth-child(1), /* Beach */
-    .categories-content > :nth-child(2) { /* Desert */
-        grid-column: 1 / -1;
-        text-align: center;
-    }
-
-    /* Special styling for Beach and Desert */
     .categories-content > :nth-child(1) .row-img,
     .categories-content > :nth-child(2) .row-img {
-        width: 180px;
-        height: 200px;
-        border-radius: 60px;
-        margin: 0 auto 15px;
-    }
-
-    /* Other categories in 2-column grid */
-    .categories-content > :nth-child(n+3) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        grid-column: 1 / -1;
-    }
-
-    .categories-content > :nth-child(n+3) .row-img {
-        width: 100%;
-        height: 140px;
+        height: 160px;
         border-radius: 30px;
     }
 
+    .categories-content > :nth-child(n+3) .row-img {
+        height: 120px;
+        border-radius: 25px;
+    }
+}
+
+ 
+ 
+
+ 
+ 
     /* About Section adjustments */
     .about {
         grid-template-columns: 1fr;
@@ -1277,7 +1252,7 @@ header.sticky {
     .social {
         justify-content: center;
     }
-}
+
 
 /* Very Small Devices (up to 480px) */
 @media (max-width: 480px) {
@@ -1409,3 +1384,16 @@ header.sticky {
         margin: 10px 0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
