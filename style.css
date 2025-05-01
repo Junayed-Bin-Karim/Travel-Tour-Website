@@ -1115,7 +1115,20 @@ header.sticky {
 
 
 
-@media (max-width: 768px) {
+
+
+/* Base styling */
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Mobile layout */
+  @media (max-width: 768px) {
     .about {
       flex-direction: column;
       text-align: center;
@@ -1142,51 +1155,30 @@ header.sticky {
   
     .rating {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: nowrap; /* Prevent wrap */
-      gap: 10px;
-     }
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
   
     .rating .col {
-      width: 100px; /* Fixed width to ensure fit on small screen */
-      flex-shrink: 0;
-      background: #f9f9f9;
-      padding: 10px;
+       background: #f9f9f9;
+      padding: 15px;
       border-radius: 10px;
-     }
+      width: 80%;
+    }
   
     .rating .col h4 {
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 5px;
     }
   
     .rating .col p {
-      font-size: 13px;
+      font-size: 14px;
       color: #666;
     }
   }
   
-  .rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
-  
-  .rating .col {
-    width: 30%;
-    min-width: 90px;
-    text-align: center;
-    background: #f9f9f9;
-    padding: 10px;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  
-
-
-
+ 
 
 
 
