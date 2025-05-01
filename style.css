@@ -1117,57 +1117,69 @@ header.sticky {
 
 
 
-/* Mobile Stats Section - Full Width Fix */
-@media (max-width: 768px) {
+  /* Base styling */
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Mobile layout */
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      text-align: center;
+      padding: 30px 15px;
+    }
+  
+    .about-img img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    .about-text h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+  
+    .about-text p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+  
     .rating {
-        display: flex;
-        width: 100%;
-        padding: 0;
-        margin: 1.5rem 0;
-        gap: 0; /* Remove gap and use padding instead */
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: nowrap;
+      flex-direction: row;
     }
-
-    .col {
-        flex: 1;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(5px);
-        padding: 15px 5px;
-        margin: 0 1px; /* Tiny margin to prevent overlap */
-        border-radius: 8px; /* Slightly smaller radius */
-        text-align: center;
-        min-width: 0;
-        box-sizing: border-box; /* Include padding in width */
+  
+    .rating .col {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      width: 100px;
+      flex-shrink: 0;
     }
-
-    .col:first-child {
-        margin-left: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+  
+    .rating .col h4 {
+      font-size: 20px;
+      margin-bottom: 5px;
     }
-
-    .col:last-child {
-        margin-right: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+  
+    .rating .col p {
+      font-size: 14px;
+      color: #666;
     }
-
-    .col:not(:first-child):not(:last-child) {
-        border-radius: 0;
-    }
-
-    .col h4 {
-        font-size: 1.4rem;
-        color: var(--main-color);
-        margin-bottom: 5px;
-    }
-
-    .col p {
-        font-size: 0.7rem;
-        color: #ffffffcc;
-    }
-}
-
-
+  }
+  
 
 
 
