@@ -1083,12 +1083,7 @@ header.sticky {
         grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
         gap: 1.5rem;
     }
-
-    /* First row items (Beach & Desert) - larger */
-    .categories-content > :nth-child(1),
-    .categories-content > :nth-child(2) {
-        /* Keep in 2-col grid but make contents larger */
-    }
+ 
 
     /* First row images larger */
     .categories-content > :nth-child(1) .row-img,
@@ -1113,8 +1108,7 @@ header.sticky {
          font-weight: 600;
     }
 
-    /* About section adjustments remain the same */
-    
+     
 }
 
 /* Small screen adjustments */
